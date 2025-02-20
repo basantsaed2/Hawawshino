@@ -850,10 +850,8 @@ const AddProductPage = () => {
 
             // Append formData fields for names
             formData.append(`variations[${indexVar}][names][${index}][name]`, name.name);
-            formData.append(`variations[${indexVar}][names][${index}][tranlation_name]`,
-              typeof name.tranlation_name === 'string' ? name.tranlation_name : '');
-            formData.append(`variations[${indexVar}][names][${index}][tranlation_id]`,
-              name.tranlation_id !== undefined ? String(name.tranlation_id) : '');
+            formData.append(`variations[${indexVar}][names][${index}][tranlation_name]`, name.tranlation_name );
+            formData.append(`variations[${indexVar}][names][${index}][tranlation_id]`,name.tranlation_id);
           });
         } else {
           console.warn(`variation.names is not a valid array for variation index ${indexVar}`);
